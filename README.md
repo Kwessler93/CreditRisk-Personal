@@ -1,5 +1,7 @@
 # CreditRisk-Personal
 
+Members: Kimberly Wessler, Cristian Pena, Chris Dobbin, Christine Espiritu, JaJuan Graham
+
 ## Overview
 **CreditRisk-Personal** is a machine learning classification project that predicts whether a personal loan will default or not based on borrower and loan features. Using a filtered subset of the Credit Risk Dataset from Kaggle, we focus specifically on loans with a **personal** intent to train a model that can assess creditworthiness and mitigate lending risks.
 
