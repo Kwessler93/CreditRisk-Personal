@@ -71,7 +71,7 @@ We implemented and evaluated the following models:
 | `preprocessed_credit_risk.csv`      | Cleaned and Preprocessed data for modeling |
 | `preprocessed_credit_risk_2.csv`    | Modified dataset removing columns with negative correlation |
 | `credit_risk.db`                    | Sqlite database with cleaned and preprocessed data to be used for modeling |
-| `credit_risk_visualize.ipynb`       | Visualizaations and analysis of the original dataset |
+| `credit_risk_visualize.ipynb`       | Visualizations and analysis of the original dataset |
 
 
 
