@@ -21,38 +21,46 @@ The goal of this project is to:
 
 ## Tools & Technologies
 - **Languages**: Python
-- **Libraries**: pandas, scikit-learn, matplotlib, seaborn, xgboost
-- **Data Storage**: SQLite or Apache Spark (for querying the filtered dataset)
+- **Libraries**: pandas, scikit-learn, matplotlib, TensorFlow/Keras
+- **Data Storage**: SQLite
 - **Version Control**: Git and GitHub
-- **Notebook Environment**: Jupyter Notebook or .py scripts
+- **Notebook Environment**: Jupyter Notebook
 
-## Project Tasks
-1. **Data Loading & SQL Integration**  
-   Load the raw dataset into a SQL or Spark environment, filter for personal loans, and export for preprocessing.
+## Project Workflow
 
-2. **Data Cleaning & Preprocessing**  
-   Handle missing values, encode categorical variables, and normalize numeric features.
+### 1. Data Loading via SQL
+- The raw dataset was loaded and filtered using SQL queries in a Jupyter Notebook environment.
+- Only records with `loan_intent == 'PERSONAL'` were selected for modeling.
 
-3. **Model Development**  
-   Train baseline models such as Logistic Regression and Random Forest. Evaluate using accuracy, precision, recall, and F1-score.
+### 2. Data Cleaning & Preprocessing
+- Removed or imputed missing values
+- One-hot encoded categorical features
+- Standardized and normalized numerical data
+- Prepared a modeling-ready dataset using `StandardScaler`
 
-4. **Model Optimization**  
-   Use hyperparameter tuning with GridSearchCV or RandomizedSearchCV. Document results in CSV format to track improvements.
+### 3. Model Development
+We implemented and evaluated the following models:
+- **Logistic Regression** (baseline)
+- **Random Forest Classifier**
+- **Neural Network using Keras/TensorFlow**
 
-5. **Results & Evaluation**  
-   Select the best-performing model and visualize key metrics (confusion matrix, ROC curve, etc.). Ensure model meets or exceeds 75% accuracy.
+### 4. Model Optimization
+- Hyperparameter tuning was performed using:
+  - `GridSearchCV` for Random Forest
+  - Keras Tuner (`Hyperband`) for the Neural Network
+- Performance metrics from each tuning iteration were logged and reviewed
+- Final model performance was displayed at the end of each notebook
 
-6. **Documentation & Presentation**  
-   Maintain a clean GitHub repo with a polished README. Prepare and deliver a group presentation summarizing findings and process.
+### 5. Evaluation
+- **Random Forest** model achieved classification accuracy **>75%**
+- Performance metrics included: accuracy, precision, recall, F1-score
+- Confusion matrices and classification reports were generated
 
-## Deliverables
-- Cleaned dataset (filtered for personal loans)
-- Python scripts or notebooks for each pipeline stage
-- SQL or Spark queries
-- Final trained model and evaluation metrics
-- Optimization results log (CSV or embedded)
-- Complete GitHub repository with organized structure
-- Group presentation slides
+## Results
+- **Best Model**: Random Forest (Accuracy > 75%)
+- **Model Input**: Cleaned and standardized SQL-derived dataset
+- **Documentation**: Iterative tuning results embedded in notebooks and reported in markdown/CSV format
+
 
 ## License
 This project is intended for educational purposes only. Refer to the original dataset's licensing on Kaggle.
