@@ -36,8 +36,7 @@ The goal of this project is to:
 - Removed or imputed missing values
 - One-hot encoded categorical features
 - Standardized and normalized numerical data
-- Prepared a modeling-ready dataset using `StandardScaler`
-- Saved cleaned and preprocessed in a sqlite databse and CSV file
+- Saved cleaned and preprocessed data in a sqlite databse and CSV file
 
 ### 3. Model Development
 We implemented and evaluated the following models:
@@ -46,7 +45,6 @@ We implemented and evaluated the following models:
 
 ### 4. Model Optimization
 - Hyperparameter tuning was performed using:
-  - `GridSearchCV` for Random Forest
   - Keras Tuner (`Hyperband`) for the Neural Network
 - Performance metrics from each tuning iteration were logged and reviewed
 - Final model performance was displayed at the end of each notebook
@@ -60,6 +58,22 @@ We implemented and evaluated the following models:
 - **Best Model**: Random Forest (Accuracy > 92.62%)
 - **Model Input**: Cleaned and standardized SQL-derived dataset or CSV
 - **Documentation**: Iterative tuning results embedded in notebooks and reported in markdown/CSV format
+
+## Notebooks & Files
+
+| Filename                            | Description |
+|-------------------------------------|-------------|
+| `CreditRisk_clean.ipynb`            | Loads and cleans the filtered dataset. Includes SQL-based querying, preprocessing, encoding, and normalization steps. |
+| `Random Forest-.ipynb`              | Trains a baseline Random Forest model. Evaluates accuracy, precision, and recall. No hyperparameter tuning applied. |
+| `nn_model.ipynb`                    | Builds and tunes a Neural Network using Keras and Keras Tuner (Hyperband). Logs performance metrics across trials. |
+| `CreditRisk_Personal_Model_Comparison.ipynb` | Compares Random Forest and Neural Network models using evaluation metrics like confusion matrix and classification report. |
+| `credit_risk_dataset.csv`           | Raw dataset sourced from Kaggle, includes borrower and loan data. |
+| `preprocessed_credit_risk.csv`      | Cleaned and Preprocessed data for modeling |
+| `preprocessed_credit_risk_2.csv`    | Modified dataset removing columns with negative correlation |
+| `credit_risk.db`                    | Sqlite database with cleaned and preprocessed data to be used for modeling |
+| `credit_risk_visualize.ipynb`       | Visualizaations and analysis of the original dataset |
+
+
 
 ## License
 This project is intended for educational purposes only. Refer to the original dataset's licensing on Kaggle.
