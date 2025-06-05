@@ -28,8 +28,8 @@ The goal of this project is to:
 
 ## Project Workflow
 
-### 1. Data Loading via SQL
-- The raw dataset was loaded and filtered using SQL queries in a Jupyter Notebook environment.
+### 1. Data Loading
+- The raw dataset was loaded and filtered in a Jupyter Notebook environment.
 - Only records with `loan_intent == 'PERSONAL'` were selected for modeling.
 
 ### 2. Data Cleaning & Preprocessing
@@ -37,10 +37,10 @@ The goal of this project is to:
 - One-hot encoded categorical features
 - Standardized and normalized numerical data
 - Prepared a modeling-ready dataset using `StandardScaler`
+- Saved cleaned and preprocessed in a sqlite databse and CSV file
 
 ### 3. Model Development
 We implemented and evaluated the following models:
-- **Logistic Regression** (baseline)
 - **Random Forest Classifier**
 - **Neural Network using Keras/TensorFlow**
 
@@ -52,15 +52,14 @@ We implemented and evaluated the following models:
 - Final model performance was displayed at the end of each notebook
 
 ### 5. Evaluation
-- **Random Forest** model achieved classification accuracy **>75%**
+- **Random Forest** model achieved classification accuracy **>92.62%**
 - Performance metrics included: accuracy, precision, recall, F1-score
 - Confusion matrices and classification reports were generated
 
 ## Results
-- **Best Model**: Random Forest (Accuracy > 75%)
-- **Model Input**: Cleaned and standardized SQL-derived dataset
+- **Best Model**: Random Forest (Accuracy > 92.62%)
+- **Model Input**: Cleaned and standardized SQL-derived dataset or CSV
 - **Documentation**: Iterative tuning results embedded in notebooks and reported in markdown/CSV format
-
 
 ## License
 This project is intended for educational purposes only. Refer to the original dataset's licensing on Kaggle.
